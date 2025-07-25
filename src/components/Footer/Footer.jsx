@@ -3,12 +3,13 @@ import Logo from '../../assets/images/new logo.svg';
 import PolicyModal from '../PolicyModal/PolicyModal';
 import ComingSoonModal from '../ComingSoonModal/ComingSoonModal';
 import { policyContent } from '../../data/policyContent.jsx';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 
 const Footer = () => {
   const [activeModal, setActiveModal] = useState(null);
   const [comingSoonModal, setComingSoonModal] = useState({ isOpen: false, featureName: '' });
+  const navigate = useNavigate();
 
   const openModal = (modalType) => {
     setActiveModal(modalType);
@@ -36,7 +37,15 @@ const Footer = () => {
         <div className="container mx-auto px-4">
             {/* Logo and Description */}
             <div className="mb-12">
-                <img src={Logo} alt="YESGrant Logo" className="h-16 mb-6" />
+                <img
+                  src={Logo}
+                  alt="YESGrant Logo"
+                  className="h-16 mb-6 cursor-pointer"
+                  onClick={() => {
+                    navigate('/');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                />
                 <p className="text-gray-300 max-w-2xl">
                     YESGrant is your trusted partner in achieving your academic dreams through fully funded scholarships. 
                     We provide expert guidance and resources to help you succeed in your educational journey.
@@ -48,8 +57,32 @@ const Footer = () => {
                 <div>
                     <h3 className="text-lg font-semibold mb-4">Company</h3>
                     <ul className="space-y-2">
-                        <li><Link to="/" className="text-gray-300 hover:text-primary transition-colors">Home</Link></li>
-                        <li><Link to="/about" className="text-gray-300 hover:text-primary transition-colors">About</Link></li>
+                        <li>
+                          <Link
+                            to="/"
+                            className="text-gray-300 hover:text-primary transition-colors"
+                            onClick={() => {
+                              setTimeout(() => {
+                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                              }, 0);
+                            }}
+                          >
+                            Home
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/about"
+                            className="text-gray-300 hover:text-primary transition-colors"
+                            onClick={() => {
+                              setTimeout(() => {
+                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                              }, 0);
+                            }}
+                          >
+                            About
+                          </Link>
+                        </li>
                         <li><Link to="/blog" className="text-gray-300 hover:text-primary transition-colors">Blog</Link></li>
                         <li><Link to="/mentors" className="text-gray-300 hover:text-primary transition-colors">Mentors</Link></li>
                         <li><Link to="/testimonials" className="text-gray-300 hover:text-primary transition-colors">Testimonials</Link></li>

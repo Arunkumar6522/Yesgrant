@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Headset -->
+  <path d="M20 4C12.268 4 6 10.268 6 18V25C6 26.105 6.895 27 8 27H10V20C10 18.895 10.895 18 12 18H16C17.105 18 18 18.895 18 20V27H22V20C22 18.895 22.895 18 24 18H28C29.105 18 30 18.895 30 20V27H32C33.105 27 34 26.105 34 25V18C34 10.268 27.732 4 20 4Z" fill="#4A9D93"/>
+  
+  <!-- Person -->
+  <circle cx="20" cy="14" r="4" fill="#4A9D93"/>
+  <path d="M26 30H14C12.895 30 12 29.105 12 28V27H28V28C28 29.105 27.105 30 26 30Z" fill="#4A9D93"/>
+  
+  <!-- Support/Service Indicator -->
+  <circle cx="30" cy="10" r="4" fill="#4CAF50"/>
+  <path d="M30 6V14M26 10H34" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+</svg> 

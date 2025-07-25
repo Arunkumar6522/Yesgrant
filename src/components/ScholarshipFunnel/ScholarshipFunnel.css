@@ -1,0 +1,256 @@
+.funnel-section {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 120px auto 0;
+  padding: 0 20px;
+}
+
+.funnel-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.funnel-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.funnel-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/* Funnel shapes */
+.funnel-row:nth-child(1) .funnel-stage {
+  width: 100%;
+  height: 70px;
+  margin-top: 0;
+}
+
+.funnel-row:nth-child(1) .funnel-stage::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #40E0D0, #7FD1AE);
+  clip-path: polygon(0 0, 100% 0, 92% 100%, 8% 100%);
+  transform-origin: center bottom;
+  transform: rotateX(25deg);
+}
+
+.funnel-row:nth-child(2) .funnel-stage {
+  width: 92%;
+  height: 60px;
+  margin-top: 15px;
+}
+
+.funnel-row:nth-child(2) .funnel-stage::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #FF69B4, #FFA07A);
+  clip-path: polygon(8% 0, 92% 0, 84% 100%, 16% 100%);
+  transform-origin: center bottom;
+  transform: rotateX(25deg);
+}
+
+.funnel-row:nth-child(3) .funnel-stage {
+  width: 84%;
+  height: 50px;
+  margin-top: 15px;
+}
+
+.funnel-row:nth-child(3) .funnel-stage::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #FF1493, #DA70D6);
+  clip-path: polygon(16% 0, 84% 0, 76% 100%, 24% 100%);
+  transform-origin: center bottom;
+  transform: rotateX(25deg);
+}
+
+.funnel-row:nth-child(4) .funnel-stage {
+  width: 76%;
+  height: 45px;
+  margin-top: 15px;
+}
+
+.funnel-row:nth-child(4) .funnel-stage::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #4169E1, #6495ED);
+  clip-path: polygon(24% 0, 76% 0, 68% 100%, 32% 100%);
+  transform-origin: center bottom;
+  transform: rotateX(25deg);
+}
+
+.funnel-row:nth-child(5) .funnel-stage {
+  width: 68%;
+  height: 40px;
+  margin-top: 15px;
+}
+
+.funnel-row:nth-child(5) .funnel-stage::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #483D8B, #6A5ACD);
+  clip-path: polygon(32% 0, 68% 0, 60% 100%, 40% 100%);
+  transform-origin: center bottom;
+  transform: rotateX(25deg);
+}
+
+/* Adjust the side effect height for the gaps */
+.funnel-stage::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 12px;
+  bottom: -12px;
+  left: 0;
+  background: inherit;
+  filter: brightness(0.7);
+  transform-origin: center top;
+  transform: rotateX(-65deg);
+}
+
+/* Add connecting lines between gaps */
+.funnel-row:nth-child(1) .funnel-stage::after,
+.funnel-row:nth-child(2) .funnel-stage::after,
+.funnel-row:nth-child(3) .funnel-stage::after,
+.funnel-row:nth-child(4) .funnel-stage::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 15px;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), transparent);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stage-label {
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 2;
+  transform: translateY(-2px);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.stage-count {
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  min-width: 80px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Add shadow effect */
+.funnel-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 15px;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0) 70%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Color overrides with exact colors from image */
+.bg-yellow-400 {
+  background-color: #ffc107;
+}
+
+.bg-pink-500 {
+  background-color: #e91e63;
+}
+
+.bg-blue-400 {
+  background-color: #42a5f5;
+}
+
+.bg-purple-400 {
+  background-color: #ab47bc;
+}
+
+.bg-green-600 {
+  background-color: #2e7d32;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .funnel-container {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .funnel-section {
+    margin-top: 40px;
+    padding: 0 10px;
+  }
+
+  .funnel-row {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    align-items: center;
+  }
+
+  .stage-label {
+    font-size: 0.9rem;
+    padding: 0 0.75rem;
+  }
+
+  .stage-count {
+    margin: 0;
+    font-size: 1rem;
+    min-width: 70px;
+    padding: 0.4rem 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .funnel-section {
+    margin-top: 30px;
+  }
+
+  .stage-label {
+    font-size: 0.85rem;
+  }
+} 

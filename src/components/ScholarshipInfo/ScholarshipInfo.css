@@ -1,0 +1,63 @@
+.funnel-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.funnel-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.funnel-row:hover {
+    transform: translateX(5px);
+}
+
+.funnel-stage {
+    flex-grow: 1;
+    padding-right: 2rem;
+}
+
+.stage-label {
+    font-size: 1.1rem;
+    color: #4B5563;
+    font-weight: 500;
+}
+
+.stage-count {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1F2937;
+    padding: 0.5rem 1rem;
+    background: #F3F4F6;
+    border-radius: 6px;
+    min-width: 80px;
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    .funnel-container {
+        padding: 1rem;
+    }
+
+    .funnel-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .funnel-stage {
+        padding-right: 0;
+    }
+
+    .stage-count {
+        width: 100%;
+    }
+} 

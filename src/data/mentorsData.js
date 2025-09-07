@@ -20,6 +20,7 @@ export const featuredMentors = [
     location: "Belgium",
     description: "Passionate about sensing technology and diagnostic sensing research.",
     achievement: "Secured fully funded PhD program worth € 75,600",
+    badge: "Marie Curie Fellow, France",
     education: [
       {
         degree: "MS in Biophotonics & PhD in Biosensors",
@@ -52,6 +53,7 @@ export const featuredMentors = [
     location: "McGill University, Canada",
     description: "Passionate about science and application research.",
     achievement: "Secured fully funded PhD program worth € 54,000",
+    badge: "Erasmus Mundus Scholar, EU Commission",
     education: [
       {
         degree: "PhD in Biology and Health",
@@ -130,7 +132,7 @@ export const additionalMentors = [
     field: "Materials research", 
     image: nareshImage,
     title: "Research Scientist",
-    location: "France",
+    location: "Germany",
     description: "Expert in materials research and advanced microscopy techniques.",
     achievement: "Published in high-impact journals with groundbreaking research in materials science",
     education: [
@@ -156,7 +158,7 @@ export const additionalMentors = [
     field: "Virology",
     image: santhoshiniImage,
     title: "Virologist",
-    location: "India",
+    location: "Canada",
     description: "Expert in virology and molecular biology research.",
     achievement: "Contributed to significant viral research projects",
     education: [
@@ -182,7 +184,7 @@ export const additionalMentors = [
     field: "Protein engineering",
     image: rahilaImage,
     title: "Protein Engineer",
-    location: "Germany",
+    location: "France",
     description: "Specialized in protein engineering and molecular design.",
     achievement: "Developed novel protein engineering techniques",
     education: [
@@ -208,7 +210,7 @@ export const additionalMentors = [
     field: "Cancer drug discovery",
     image: santhoshImage,
     title: "Cancer Researcher",
-    location: "USA",
+    location: "UK",
     description: "Focused on cancer drug discovery and development.",
     achievement: "Leading innovative cancer treatment research",
     education: [
@@ -234,7 +236,7 @@ export const additionalMentors = [
     field: "Bioprocessing",
     image: faizulImage,
     title: "Bioprocessing Expert",
-    location: "India",
+    location: "Canada",
     description: "Specialized in bioprocessing and biotechnology applications.",
     achievement: "Expert in bioprocessing techniques and applications",
     education: [
@@ -260,7 +262,7 @@ export const additionalMentors = [
     field: "Materials Science & Chemical Sciences",
     image: muthuImage,
     title: "Materials Scientist",
-    location: "India",
+    location: "Belgium",
     description: "Expert in materials science and chemical engineering.",
     achievement: "Contributed to advanced materials research projects",
     education: [

@@ -41,6 +41,13 @@ const Mentors = () => {
                     alt={mentor.name} 
                     className="w-full h-full object-cover object-[center_15%] group-hover:scale-105 transition-transform duration-300"
                   />
+                  {mentor.badge && (
+                    <div className="absolute top-4 left-4 z-10">
+                      <span className="px-3 py-1 text-xs md:text-sm font-semibold bg-white/90 text-primary rounded-full shadow-[0_0_15px_rgba(34,197,94,0.8)] ring-1 ring-primary/30">
+                        {mentor.badge}
+                      </span>
+                    </div>
+                  )}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent pt-24 pb-4 px-4">
                     <h3 className="text-2xl font-semibold text-white mb-1">{mentor.name}</h3>
                     <p className="text-white/90 flex items-center gap-2">

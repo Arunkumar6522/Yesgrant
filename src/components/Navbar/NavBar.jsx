@@ -48,7 +48,7 @@ const NavBar = ({ openModal }) => {
    <nav className="relative z-50">
         <motion.div initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} className="container py-4 sm:py-6 flex justify-between items-center">
             <Link to="/">
-                <img src={Logo} alt="YesGrant" className="h-12 sm:h-16" />
+                <img src={Logo} alt="YesGrant" className="h-16 sm:h-16 md:h-20" />
             </Link>
             <div className="hidden lg:block">
                 <ul className="flex items-center gap-3">

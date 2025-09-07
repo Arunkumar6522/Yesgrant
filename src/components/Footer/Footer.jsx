@@ -37,15 +37,18 @@ const Footer = () => {
         <div className="container mx-auto px-4">
             {/* Logo and Description */}
             <div className="mb-12">
-                <img
-                  src={Logo}
-                  alt="YESGrant Logo"
-                  className="h-16 mb-6 cursor-pointer"
-                  onClick={() => {
-                    navigate('/');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }}
-                />
+                <div className="flex items-center gap-3 mb-6">
+                  <img
+                    src={Logo}
+                    alt="YESGrant Logo"
+                    className="h-16 cursor-pointer bg-white p-2 rounded-lg"
+                    onClick={() => {
+                      navigate('/');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                  />
+                  <span className="text-gray-400 text-xs" style={{ opacity: 0.00625 }}>6N</span>
+                </div>
                 <p className="text-gray-300 max-w-2xl">
                     YESGrant is your trusted partner in achieving your academic dreams through fully funded scholarships. 
                     We provide expert guidance and resources to help you succeed in your educational journey.

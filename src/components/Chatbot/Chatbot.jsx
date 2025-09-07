@@ -1076,14 +1076,24 @@ Example: 9876543210`,
           captureLead(currentInput);
         }, 500);
         
+        // First, acknowledge and set expectations
         setTimeout(() => {
           setMessages(prevMessages => [...prevMessages, { 
-            text: `Perfect! Thank you for providing your details, ${userName}! 🎉 Now I'm ready to help you with your study abroad journey. What would you like to know about our scholarship programs?`,
+            text: `Thank you, ${userName}! 🎉 We’ve received your details. Our counselor will reach out within 24 hours via WhatsApp/phone.`,
+            sender: "bot",
+            timestamp: new Date()
+          }]);
+        }, 900);
+
+        // Then, continue engagement with helpful next steps
+        setTimeout(() => {
+          setMessages(prevMessages => [...prevMessages, { 
+            text: `In the meantime, I’m here to help. Would you like to explore scholarships, countries, eligibility, or application steps?`,
             sender: "bot",
             timestamp: new Date()
           }]);
           setIsTyping(false);
-        }, 1000);
+        }, 1900);
         return;
       }
 

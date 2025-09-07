@@ -41,6 +41,13 @@ const MentorCard = ({ mentor, isFeatured }) => (
     
     <div className="p-6">
       <div className="mb-6">
+        {mentor.badge && (
+          <div className="mb-2">
+            <span className="inline-block px-3 py-1 text-xs font-semibold text-primary bg-white rounded-full shadow-[0_6px_18px_rgba(34,197,94,0.25)] ring-1 ring-primary/30">
+              {mentor.badge}
+            </span>
+          </div>
+        )}
         <p className="text-primary font-semibold">{mentor.achievement}</p>
       </div>
       

@@ -43,8 +43,8 @@ const Mentors = () => {
                   />
                   {mentor.badge && (
                     <div className="absolute top-4 left-4 z-10">
-                      <span className="px-3 py-1 text-xs md:text-sm font-semibold bg-white/90 text-primary rounded-full shadow-[0_0_15px_rgba(34,197,94,0.8)] ring-1 ring-primary/30">
-                        {mentor.badge}
+                      <span className="px-4 py-2 text-sm font-semibold text-primary bg-white rounded-full shadow-[0_6px_18px_rgba(34,197,94,0.35)] ring-1 ring-primary/30">
+                        {mentor.badge.replace(/,?\s*European Union Commission,?\s*/i, ' ').trim()}
                       </span>
                     </div>
                   )}
@@ -62,7 +62,7 @@ const Mentors = () => {
                 </div>
                 <div className="p-6">
                   <div className="mb-4">
-                    <p className="text-gray-600">{mentor.description}</p>
+                    {/* description and in-card badge hidden on Home */}
                     <p className="text-primary font-medium mt-2">{mentor.achievement}</p>
                   </div>
                   

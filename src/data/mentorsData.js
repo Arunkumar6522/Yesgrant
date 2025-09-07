@@ -53,7 +53,7 @@ export const featuredMentors = [
     location: "McGill University, Canada",
     description: "Passionate about science and application research.",
     achievement: "Secured fully funded PhD program worth € 54,000",
-    badge: "Erasmus Mundus Scholar, EU Commission",
+    badge: "Erasmus Mundus Scholar, European Union Commission, France",
     education: [
       {
         degree: "PhD in Biology and Health",
